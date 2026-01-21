@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anas Alshaer - Portfolio</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About me</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#contact" class="btn btn-primary">CONTACT ME</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-split hero-left">
+        <div class="hero-content">
+          <span class="greeting">Hi, I am</span>
+          <h1 class="name">Anas Alshaer</h1>
+          <h2 class="title">Software Engineer / Backend Developer</h2>
+          <div class="social-links">
+            <a href="mailto:anasmn2011@hotmail.com" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg></a>
+            <a href="https://github.com/AnasAlshaer1?tab=repositories" target="_blank" aria-label="GitHub"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg></a>
+            <a href="https://www.linkedin.com/in/anas-alshaer-728aa0266" target="_blank" aria-label="LinkedIn"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-split hero-right">
+        <div class="hero-image-container">
+          <img src="/profile.png" alt="Anas Alshaer" class="hero-image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2 class="section-title">About me</h2>
+        <div class="about-content">
+          <p>Motivated Software Engineer with a strong academic background, I have extensive hands-on experience in
+            developing robust back-end applications using C#, .NET, and Java. I am particularly skilled in building
+            scalable systems using Spring Boot Microservices, with a solid understanding of database design, system
+            architecture, and containerization using Docker. I am eager to apply problem-solving and teamwork skills to
+            contribute to efficient, high-performance software solutions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item">C#</div>
+          <div class="skill-item">.NET</div>
+          <div class="skill-item">Java</div>
+          <div class="skill-item">Spring Boot</div>
+          <div class="skill-item">Docker</div>
+          <div class="skill-item">SQL Server</div>
+          <div class="skill-item">Microservices</div>
+          <div class="skill-item">REST API</div>
+          <div class="skill-item">Git/GitHub</div>
+          <div class="skill-item">Postman</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section portfolio-section">
+      <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">DVLD (Driver & Vehicle Licenses)</h3>
+              <p class="project-desc">Comprehensive 3-tier backend system for managing citizen records and driver
+                licensing data. Built with C#, .NET Framework, and ADO.NET using SQL Server. Applied advanced OOP
+                principles for maintainability.</p>
+            </div>
+          </article>
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">Job Management System</h3>
+              <p class="project-desc">Scalable distributed backend using Spring Boot Microservices. Features independent
+                services for Job, Company, and Reviews. Utilized Eureka, RabbitMQ, Zipkin, Postman, and Docker for
+                orchestration and observability.</p>
+            </div>
+          </article>
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">Bank Management System</h3>
+              <p class="project-desc">C++ based console application for core banking transactions and financial data
+                management. Handles account management and transaction processing with persistent data storage using
+                text files.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <p><strong>Email:</strong> anasmn2011@hotmail.com</p>
+            <p><strong>Phone:</strong> 0533295739</p>
+            <p><strong>Location:</strong> Riyadh, Saudi Arabia</p>
+          </div>
+          <!-- Using Formspree as placeholder. User needs to register their email on formspree.io to get the specific URL -->
+          <!-- For now, I'll direct it to a generic endpoint or leave a comment -->
+          <form class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <div class="form-group">
+              <textarea name="message" placeholder="Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Anas Alshaer. All rights reserved.</p>
+    </div>
+  </footer>
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
