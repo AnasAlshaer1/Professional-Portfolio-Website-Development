@@ -4,26 +4,23 @@ const nav = document.querySelector('.nav');
 
 if (mobileToggle) {
     mobileToggle.addEventListener('click', () => {
-        nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+        nav.classList.toggle('active');
         mobileToggle.classList.toggle('active');
     });
 }
 
 // Close menu when clicking a link on mobile
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll('.nav-list a');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         if (window.innerWidth <= 768) {
-            nav.style.display = 'none';
+            nav.classList.remove('active');
+            mobileToggle.classList.remove('active');
         }
     });
 });
 
 // Reset nav display on resize
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-        nav.style.removeProperty('display');
-    }
-});
+
 
 console.log('Portfolio initialized');

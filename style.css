@@ -12,6 +12,12 @@
   --transition: all 0.3s ease;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -397,60 +403,200 @@ ul {
   .hero-right {
     width: 50%;
   }
+
+  /* Adjust nav for tablets/smaller desktops if needed, but mostly okay */
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 15px 0;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 99;
+  }
+
+  .nav.active {
+    transform: translateX(0);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .nav-link {
+    color: var(--text-main);
+    font-size: 1.5rem;
+  }
+
+  .nav-link::after {
+    background-color: var(--accent-color);
+  }
+
+  .btn-primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+
+  .mobile-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 102;
+    /* Above nav */
+    position: relative;
+  }
+
+  .mobile-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  /* Hamburger Animation */
+  .mobile-toggle.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .mobile-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-toggle.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  /* Hero Adjustments */
   .hero {
     flex-direction: column;
     padding-top: 80px;
+    min-height: auto;
   }
 
-  .hero-split,
-  .hero-right {
+  .hero-split {
     width: 100%;
-    margin: 0;
-    clip-path: none;
+    padding: 0;
   }
 
   .hero-left {
-    padding: 50px 20px;
+    padding: 40px 20px 20px;
     text-align: center;
+    background-color: var(--secondary-color);
   }
 
   .hero-content {
     padding: 0;
     margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .name {
+    font-size: 2.8rem;
+    /* Scaled down */
+  }
+
+  .title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
   }
 
   .social-links {
     justify-content: center;
+    margin-bottom: 20px;
   }
 
   .hero-right {
-    height: 400px;
+    width: 100%;
+    margin-left: 0;
+    clip-path: none;
+    background-color: var(--secondary-color);
+    /* Match top to look seamless or keep primary for contrast */
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Remove fixed height to let image dictate, or set min-height */
+    height: auto;
+    overflow: visible;
+    /* Let image breathe */
+  }
+
+  /* If we want the slant effect on mobile, we can add it back differently, but stacking is cleaner */
+
+  .hero-image-container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .hero-image {
+    width: 80%;
+    /* Good size */
+    max-width: 350px;
+    height: auto;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
+  }
+
+  /* Sections */
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .skills-grid {
+    gap: 10px;
+  }
+
+  .skill-item {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 
   .contact-wrapper {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: 2.2rem;
   }
 
-  .nav {
-    display: none;
-    /* Simple mobile hide for now, needs JS toggle */
-  }
-
-  .mobile-toggle {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-  .mobile-toggle .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--primary-color);
-    margin: 5px 0;
+  .hero-image {
+    width: 90%;
   }
 }
